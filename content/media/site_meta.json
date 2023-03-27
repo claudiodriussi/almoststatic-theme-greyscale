@@ -1,0 +1,14 @@
+{
+    "index": {
+        "title": "Home page",
+        "author": "Claudio Driussi",
+        "filename": "content/pages/index.yaml",
+        "pagename": "index",
+        "description": "",
+        "templ_name": "page.html",
+        "extends": null,
+        "cacheable": true,
+        "date": "2023-03-27 12:10:15.943659",
+        "id": 0
+    }
+}

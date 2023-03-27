@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <title>{{page.title}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block meta %}
+  <meta name="description" content="{{page.description}}">
+  <meta name="author" content="{{page.author}}">
+  <meta name="generator" content="{{meta.generator}}">
+  {% endblock %}
+  {%include "include/base_css.html" -%}
+  {% block css %}
+  {% endblock %}
+  <style>{{meta.style}}</style>
+</head>
+
+<body>
+  <header class="header_area">
+    {%include "include/navbar.html" -%}
+  </header>
+
+  <div class="container-fluid"  style="min-height: 30rem; --bs-gutter-x: 0px;">
+    {% block body %}
+    {% endblock %}
+  </div>
+
+  {%include "include/footer.html" -%}
+  {%include "include/eurocookies.html" -%}
+  {%include "include/base_js.html" -%}
+</body>
+
+</html>
