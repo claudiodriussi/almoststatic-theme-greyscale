@@ -8,27 +8,18 @@ meta:
   author: "Claudio Driussi"
   generator: "Almoststatic"
 
-site_name: Clarence Taylor
+site_name: Start Bootstrap
 slogan: An <a href="https://pypi.org/project/almoststatic/">Almoststatic</a> theme
 
 MainMenu:
   - name: About
     url: index#about
 
-  - name: Experience
-    url: index#experience
+  - name: Projects
+    url: index#projects
 
-  - name: Education
-    url: index#education
-
-  - name: Skills
-    url: index#skills
-
-  - name: Interests
-    url: index#interests
-
-  - name: Awards
-    url: index#awards
+  - name: Contact
+    url: index#signup
 
   - name: Info...
     url: info
