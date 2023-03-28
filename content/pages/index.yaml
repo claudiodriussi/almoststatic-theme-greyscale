@@ -2,7 +2,6 @@
 title: Home page
 author: Claudio Driussi
 widgets_envelope: ["", ""]
-# widgets_envelope: ['<div class="container">', "</div>"]
 
 masthead:
   id: masthead

@@ -23,7 +23,12 @@
   <style>
       .masthead {
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url({{get_media(page.masthead.image)}});
-    }
+      {% if page.masthead.height %}
+      min-height: 0;
+      height: {{ page.masthead.height }};
+      {% endif -%}
+      }
+
   </style>
 
 <header class="masthead">
@@ -32,7 +37,7 @@
       <div class="text-center">
         <h1 class="mx-auto my-0 text-uppercase">{{page.masthead.title or page.title}}</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">{{(page.masthead.text or page.description)}}</h2>
-        {% if page.masthead %}
+        {% if page.masthead.button %}
         <a class="btn btn-primary" href="{{page.masthead.button[1]}}">{{page.masthead.button[0]}}</a>
         {% endif -%}
       </div>
@@ -41,3 +46,35 @@
 </header>
 {% endif -%}
 
+{#
+
+@media (min-width: 992px) {
+.masthead {
+height: 1vh;
+padding: 0;
+}
+.masthead h1, .masthead .h1 {
+font-size: 6.5rem;
+line-height: 6.5rem;
+letter-spacing: 0.8rem;
+}
+.masthead h2, .masthead .h2 {
+max-width: 30rem;
+font-size: 1.25rem;
+}
+}
+
+.masthead {
+position: relative;
+width: 100%;
+height: 1vh;
+min-height: 20rem;
+padding: 5rem 0;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-size: cover;
+}
+
+
+#}

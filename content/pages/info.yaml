@@ -1,0 +1,128 @@
+---
+title: Info
+author: Claudio Driussi
+widgets_envelope: ['<div class="container">', "</div>"]
+
+masthead:
+  id: masthead
+  image: images/info.jpg
+  height: 20rem
+  title: Welcome
+  text: ""
+
+content:
+  - type: divider
+    disabled: false
+    height: 60px
+
+  - type: text_html
+    id: about
+    text: |
+      # Welcome
+
+      Welcome to the theme derived from [Start Bootstrap greyscale theme](https://startbootstrap.com/theme/grayscale)
+      adapted for the  [Almoststatic](https://pypi.org/project/almoststatic/) static sites engine.
+
+      The [Home page]({{get_url(^^index^^)}}) has the html copied from the
+      original resume site.
+
+      But the theme is also derived form the [Flatstep theme](https://gitlab.com/almoststatic-themes/flatstep)
+      so it can use all his widgets.
+
+      Read the [tutorial](http://flatstep.claudiodriussi.it/tutorial.html) to know how to keep it working,
+      and how to derive your own themes.
+
+      **Here you can see some widget examples**
+
+  - type: divider
+    disabled: false
+    class: divider-left
+    title: Carousel
+    text: |
+      A simple Carousel with opaque caption background
+
+  - type: carousel
+    id: carousel1
+    # envelope: ["", ""]
+    caption_class: carousel-caption-bg
+    btn_class: "btn btn-primary btn-lg"
+    slides:
+      - image: images/bg-masthead.jpg
+        image_alt: image_alt
+        caption_class: text-start
+        text: |
+          # My first image
+          Excepteur velit commodo occaecat ea aute proident dolor amet.
+        buttons: [["Learn more", "#"]]
+      - image: images/bg-signup.jpg
+        image_alt: image_alt
+        text: |
+          # My second image
+          Ex commodo aute eu in sint consequat magna.
+        buttons:
+          [
+            ["Gallery", "#", "btn btn-info"],
+            ["Once more", "#", "btn btn-primary"],
+          ]
+      - image: images/demo-image-01.jpg
+        image_alt: image_alt
+        caption_class: text-end
+        text: |
+          # lorem text
+          Exercitation nisi officia sint elit. Laboris excepteur do officia
+        buttons: [["Learn more", "#", "btn btn-info"]]
+
+  - type: divider
+    class: divider-left
+    title: Form
+    text: |
+      Form within a grid, please **note that it didn't send mails**, see
+      documentation to know how to let it work.
+
+  - type: grid
+    disabled: false
+    id: widget
+    class: border-round-10 thin-border
+    columns:
+      - column: 1
+        class: text-center
+        text: '<i class="bi bi-envelope-open" style="font-size: 3rem"></i>'
+
+      - column: 11
+        text:
+          content:
+            - type: form
+              id: form
+              class: g-3
+              action: "#"
+              method: post
+              ajax: send_mail
+              input:
+                - type: html
+                  text: |
+                    ## Sens us an email
+
+                - type: text
+                  id: name
+                  column: 6
+                  label: Your name
+                  attr: required
+
+                - type: email
+                  id: email
+                  column: 6
+                  group_after: "@"
+                  label: Your email
+                  pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+                  attr: required
+
+                - type: textarea
+                  id: comment
+                  column: 12
+                  label: Notes
+
+                - type: submit
+                  id: submit
+                  column: 2
+                  class: btn btn-secondary
+                  value: Send
