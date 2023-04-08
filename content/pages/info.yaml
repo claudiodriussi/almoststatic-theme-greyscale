@@ -23,10 +23,10 @@ content:
       Welcome to the theme derived from [Start Bootstrap greyscale theme](https://startbootstrap.com/theme/grayscale)
       adapted for the  [Almoststatic](https://pypi.org/project/almoststatic/) static sites engine.
 
-      The [Home page]({{get_url(^^index^^)}}) has the html copied from the
-      original resume site.
+      The [Home page]({{get_url(^^index^^)}}) is built with many Almoststatic widgets and it is very similar to the
+      original Greyscale site.
 
-      But the theme is also derived form the [Flatstep theme](https://gitlab.com/almoststatic-themes/flatstep)
+      The theme is also derived form the [Flatstep theme](https://gitlab.com/almoststatic-themes/flatstep)
       so it can use all his widgets.
 
       Read the [tutorial](http://flatstep.claudiodriussi.it/tutorial.html) to know how to keep it working,
